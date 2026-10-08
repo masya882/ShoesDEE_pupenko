@@ -1,0 +1,76 @@
+﻿<Window x:Class="ShoesDEE.AddEditProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoesDEE"
+        mc:Ignorable="d"
+        Title="AddEditProductWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+       </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <StackPanel Margin="20 0">
+                <TextBlock Text="Артикул"/>
+                <TextBox x:Name="ProductArticule"
+                         MaxLength="10"/>
+
+                <TextBlock Text="Наименование товара"/>
+                <TextBox x:Name="ProductName"
+         MaxLength="30"/>
+                <TextBlock Text="Единица измерения"/>
+                <ComboBox Name="ProductUnit"/>
+
+                <TextBlock Text="Цена"/>
+                <TextBox Name="ProductPrice"/>
+
+                <TextBlock Text="Производитель"/>
+                <ComboBox Name="ProductProducer"/>
+                
+                <TextBlock Text="Поставщик"/>
+                <ComboBox Name="ProductProvider"/>
+                
+                <TextBlock Text="Категория"/>
+                <ComboBox Name="ProductCategory"/>
+                
+                <TextBlock Text="Скидка"/>
+                <TextBox Name="ProductDicsount"/>
+                
+                <TextBlock Text="Кол-во на складе"/>
+                <TextBox Name="ProductAmountInStock"/>
+                
+                <TextBlock Text="Описание"/>
+                <TextBox Name="ProductDesctiption"
+                         Height="150"
+                         TextWrapping="Wrap"/>
+                
+                <TextBlock Text="Фото"/>
+                <TextBox Name="ProductPhoto"/>
+
+
+            </StackPanel>
+            
+        </ScrollViewer>
+
+        <Button Name="CancelButton"
+                Content="Отменить"
+                Grid.Row="1"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="20 0"
+                Click="CancelButton_Click"/>
+
+        <Button Name="SaveButton"
+        Content="Сохранить"
+        Grid.Row="1"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Center"
+        Margin="20 0"
+                Click="SaveButton_Click"/>
+
+    </Grid>
+</Window>
